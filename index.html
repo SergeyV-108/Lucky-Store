@@ -7,6 +7,10 @@
 
 	<!-- Подключение стилей слайдера -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	
+	<!-- подключение анимации AOS -->
+	<link rel="stylesheet" href="css/aos.css">
+
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Lucky Store</title>
@@ -288,7 +292,8 @@
 				<div class="users">
 					<div class="users__content">
 						<div class="users__column column-reviews">
-							<div class="column-reviews__text">
+							<div class="column-reviews__text"  data-aos="fade-up-right" data-aos-delay="200"
+							data-aos-duration="1000">
 								<p>
 									I wonder if I've been changed in the night. Let me think.
 									Was I the same when I got up this morning? I almost think I can remember feeling a
@@ -308,10 +313,13 @@
 							</div>
 						</div>
 						<div class="users__column column-form">
-							<form class="column-form__body" action="">
-								<div class="column-form__title"><span>Sign Up</span> & <span>Save 10%</span></div>
-								<div class="column-form__subtitle">for our newsletter</div>
-								<input class="column-form__input" type="email" placeholder="Enter your email address">
+							<form class="column-form__body" action="#" id="form">
+								<label for="email">
+									<div class="column-form__title"><span>Sign Up</span> & <span>Save 10%</span></div>
+									<div class="column-form__subtitle">for our newsletter</div>
+								</label>
+								<input class="column-form__input req email" type="email" name="email" placeholder="Enter your email address">
+								<div class="column-form__tooltip" id="tooltip">Fill in the field!</div>
 								<button class="column-form__button" type="submit">Sign Up</button>
 							</form>
 						</div>
@@ -319,7 +327,7 @@
 				</div>
 				<!-- pagging -->
 				<div class="pagging">
-					<a href="#" class="pagging__arrow pagging__arrow_prev">Previous</a>
+					<a href="#" class="pagging__arrow pagging__arrow_prev"><span><i class='fas fa-chevron-left'></span></i>Previous</a>
 					<ul class="pagging__list">
 						<li><a href="#" class="pagging__item">1</a></li>
 						<li><a href="#" class="pagging__item">...</a></li>
@@ -331,7 +339,7 @@
 						<li><a href="#" class="pagging__item">...</a></li>
 						<li><a href="#" class="pagging__item">35</a></li>
 					</ul>
-					<a href="#" class="pagging__arrow pagging__arrow_next">Next</a>
+					<a href="#" class="pagging__arrow pagging__arrow_next">Next<span><i class='fas fa-chevron-right'></span></i></a>
 				</div>
 			</div>
 		</main>
@@ -355,6 +363,13 @@
 
 	<script src="js/swiper.js"></script>
 	<script src="js/swiper_bestsellers.js"></script>
+
+	<!-- подключение иконок -->
+	<script src="https://kit.fontawesome.com/9e73be8edf.js" crossorigin="anonymous"></script>
+
+	<!-- подключение анимации AOS -->
+	<script src="js/aos.js"></script>
+
 	<script src="js/app.js"></script>
 	
 </body>
